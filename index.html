@@ -18,7 +18,8 @@
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">Fresa 🍓</h5>
-                        <button class="btn btn-outline-primary" data-fruta="fresa">agregar</button>
+                        <p class="lead">$300</p>
+                        <button class="btn btn-outline-primary" data-fruta="fresa" data-precio="300">agregar</button>
                     </div>
                 </div>
             </article>
@@ -26,7 +27,8 @@
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">Banana 🍌</h5>
-                        <button class="btn btn-outline-primary" data-fruta="banana">agregar</button>
+                        <p class="lead">$200</p>
+                        <button class="btn btn-outline-primary" data-fruta="banana" data-precio="200">agregar</button>
                     </div>
                 </div>
             </article>
@@ -34,7 +36,8 @@
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">Manzana 🍏 </h5>
-                        <button class="btn btn-outline-primary" data-fruta="manzana">agregar</button>
+                        <p class="lead">$100</p>
+                        <button class="btn btn-outline-primary" data-fruta="manzana" data-precio="100">agregar</button>
                     </div>
                 </div>
             </article>
@@ -42,7 +45,8 @@
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">Mango 🥭</h5>
-                        <button class="btn btn-outline-primary" data-fruta="mango">agregar</button>
+                        <p class="lead">$50</p>
+                        <button class="btn btn-outline-primary" data-fruta="mango" data-precio="50">agregar</button>
                     </div>
                 </div>
             </article>
@@ -50,7 +54,8 @@
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">Sandia 🍉 </h5>
-                        <button class="btn btn-outline-primary" data-fruta="sandia">agregar</button>
+                        <p class="lead">$30</p>
+                        <button class="btn btn-outline-primary" data-fruta="sandia" data-precio="30">agregar</button>
                     </div>
                 </div>
             </article>
@@ -58,7 +63,8 @@
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">Melon 🍈</h5>
-                        <button class="btn btn-outline-primary" data-fruta="melon">agregar</button>
+                        <p class="lead">$10</p>
+                        <button class="btn btn-outline-primary" data-fruta="melon" data-precio="10">agregar</button>
                     </div>
                 </div>
             </article>
@@ -67,18 +73,35 @@
 
     <section class="container mt-3">
         <ul class="list-group" id="carrito">
-            <!-- <li class="list-group-item d-flex justify-content-between align-items-center">
-                <span class="lead">A list item</span>
-                <span class="badge bg-primary rounded-pill">14</span>
-            </li> -->
+            <template id="template">
+                <li class="list-group-item bg-secondary text-white">
+                    <span class="badge bg-primary rounded-pill ">12</span>
+                    <span class="lead">Fresa</span>
+                </li>
+                <li class="list-group-item  d-flex justify-content-between align-items-center">
+                    <div>
+                        <p class="lead mb-0">Total: $<span>300</span></p>
+                    </div>
+                    <div>
+                        <buttom class="btn btn-sm btn-danger">Quitar</buttom>
+                        <buttom class="btn btn-sm btn-success">Agregar</buttom>
+                    </div>
+                </li>
+            </template>
         </ul>
     </section>
-    <template id="template">
-        <li class="list-group-item d-flex justify-content-between align-items-center">
-            <span class="lead">A list item</span>
-            <span class="badge bg-primary rounded-pill">14</span>
-        </li>
-    </template>
+
+    <footer id="footer" class="container mt-3">
+        <template id="templateFooter">
+            <div class="card">
+                <div class="card-body d-flex justify-content-between align-items-center">
+                    <p class="lead mb-0">Total $<span>1500</span></p>
+                    <button class="btn btn-outline-primary">Finalizar compra</button>
+                </div>
+            </div>
+        </template>
+    </footer>
+
 
     <script src="app.js"></script>
 </body>
