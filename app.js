@@ -75,7 +75,12 @@ const pintarFooter = () => {
   const clone = $templateFooter.content.cloneNode(true);
   clone.querySelector(".card .card-body span").textContent = total;
   $footer.appendChild(clone);
-  
+
+  if (total === 0) {
+    setTimeout(() => {
+      $footer.textContent = "";
+    }, 1000);
+  }
 };
 
 const btnAumentar = (e) => {
